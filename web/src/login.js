@@ -1,5 +1,5 @@
 // matching user
-function submitReg(e) {
+function submitLog(e) {
     e.preventDefault();
     const emailUser = document.getElementById("email").value;
     const pwUser = document.getElementById("password").value;
@@ -35,5 +35,5 @@ fetch("http://localhost:3000/login", {
 return false; // Prevent the default behavior of the "Kirim Pertanyaan" button
 }
 
-const daftarButton = document.getElementById("button-daftar");
-daftarButton.addEventListener("click", submitReg);
+const daftarButton = document.getElementById("button-login");
+daftarButton.addEventListener("click", submitLog);

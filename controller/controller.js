@@ -24,7 +24,7 @@ export const dataAlatBerat = async (req, res) => {
 
 // match user
 export const login = async (req, res) => {
-  const {email,password} = req.query
+  const {email,password} = req.body
   try {
     // Find the user in the database by username
     const user = await userClient.findOne({where : {email, password}});
