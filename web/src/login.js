@@ -1,39 +1,44 @@
 // matching user
 function submitLog(e) {
-    e.preventDefault();
-    const emailUser = document.getElementById("email").value;
-    const pwUser = document.getElementById("password").value;
+  e.preventDefault();
+  const emailUser = document.getElementById('email').value;
+  const pwUser = document.getElementById('password').value;
 
-const catchdb = {
+  const catchdb = {
     email: emailUser,
     password: pwUser,
-};
+  };
 
+  fetch('http://localhost:3000/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(catchdb),
+    redirect: 'follow',
+    mode: 'cors',
+    credentials: 'same-origin',
+  })
+    .then((response) => response.json())
+    .then((user) => {
+      if (user.success) {
+        // Successful login
+        alert('Selamat Datang');
+        window.location.href = '../clientarea.html';
+      } else {
+        // Invalid login
+        alert('Invalid credentials');
+      }
+    })
+    .catch((error) => {
+      console.error('Terjadi kesalahan:', error);
+      alert('Terjadi kesalahan saat mengirim data.');
+    });
 
-fetch("http://localhost:3000/login", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(catchdb),
-  redirect: "follow",
-  mode: "cors", // Enable CORS
-  credentials: "same-origin", // Optional: Include credentials (cookies) when making same-origin requests
-})
-
-.then((response) => response.json()) // Parse the response as JSON
-.then((data) => {
-  // Handle the response from the server if needed
-  alert("Selamat Datang");
-  window.location.href = "../index.html";
-})
-.catch((error) => {
-  console.error("Terjadi kesalahan:", error);
-  alert("Terjadi kesalahan saat mengirim data.");
-});
-
-return false; // Prevent the default behavior of the "Kirim Pertanyaan" button
+  return false;
 }
 
-const daftarButton = document.getElementById("button-login");
-daftarButton.addEventListener("click", submitLog);
+const loginButton = document.getElementById('button-login');
+if (loginButton) {
+  loginButton.addEventListener('click', submitLog);
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentalkan</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/6ac5fc642c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Nav -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <img class="logo" src="./src/img/sort.png" alt="logo">
+        <h3 class="logos">Rentalkan</h3>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Katalog</a></li>
+          <li><a href="">Merk</a></li>
+        </ul>
+    </nav>
+    <!-- Nav -->
+
+    <!-- Banner -->
+    <div class="Banner">
+        <div class="banner">
+          <div class="text">
+            <div class="desc">
+              <h1>Let's ROCK !</h1>
+              <p>Pilih keandalan dan kinerja unggul dengan alat berat kami. Dari ekskavator hingga truk derek, kami menyediakan solusi terbaik untuk proyek konstruksi Anda.</p>
+              <input type="search" placeholder="cari excavator" id="cariProduk">
+              <button class="explore-button">Cari</button>
+            </div>
+          </div>
+          <div class="image">
+              <img src="./src/img/herop.png" alt="Gambar Banner" width="100%">
+          </div>
+        </div>
+    </div>
+    <!-- Banner -->
+
+    <!-- showroom -->
+    <h1 style="text-align: center;font-style: italic">Best Order</h1>
+    <div class="showroom">
+        <div class="containershow">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="./src/img/pngwing.com(16).png" style="width:100%">
+            </div>
+    
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="./src/img/forklift.png" style="width:100%">
+            </div>
+    
+                
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+    
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+    
+            <div class="row">
+                <div class="column">
+                <img class="demo cursor" src="./src/img/pngwing.com(16).png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="column">
+                <img class="demo cursor" src="./src/img/forklift.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- showroom -->
+
+    <!-- All Rent -->
+    <div class="allrent">
+        <h2>Category</h2>
+        <p>Terdapat puluhan kategori alat berat.</p>
+
+        <div id="containerCategory">
+            <!-- item card -->
+        </div>
+    
+    <!-- All Rent -->
+
+    <!--scripts-->
+    <script src="./src/showroom.js"></script>
+    <script src="./src/login.js"></script>
+    <script src="./src/category.js"></script>
+  
+</body>
+</html>
