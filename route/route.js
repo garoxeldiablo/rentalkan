@@ -6,6 +6,6 @@ const route = express.Router();
 route.get('/view', dataAlatBerat);
 route.post('/register', addUser);
 route.post('/login', login);
-route.post('/detail/:id', detProduk);
+route.get('/detail/:id', detProduk);
 
 export default route;
