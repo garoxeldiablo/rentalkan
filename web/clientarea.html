@@ -8,6 +8,59 @@
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://kit.fontawesome.com/6ac5fc642c.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
 </head>
 <body>
     <!-- Nav -->
@@ -17,82 +70,65 @@
           <i class="fas fa-bars"></i>
         </label>
         <img class="logo" src="./src/img/sort.png" alt="logo">
-        <h3 class="logos">Rentalkan</h3>
+        <h3 class="logos" style="margin-right: 5px;">Halo!</h3>
+        <div class="clientuser"><h3>Client</h3></div>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Katalog</a></li>
-          <li><a href="">Merk</a></li>
+          <li><a href="">Get Rent</a></li>
+          <li><a href="">Chart</a></li>
+          <li><a href="">History</a></li>
+          <li><a href="./index.html" style="background: #213555;color: white; border-radius: 5px; cursor: pointer;">Home</a></li>
         </ul>
     </nav>
     <!-- Nav -->
 
-    <!-- Banner -->
-    <div class="Banner">
-        <div class="banner">
-          <div class="text">
-            <div class="desc">
-              <h1>Let's ROCK !</h1>
-              <p>Pilih keandalan dan kinerja unggul dengan alat berat kami. Dari ekskavator hingga truk derek, kami menyediakan solusi terbaik untuk proyek konstruksi Anda.</p>
-              <input type="search" placeholder="cari excavator" id="cariProduk">
-              <button class="explore-button">Cari</button>
-            </div>
-          </div>
-          <div class="image">
-              <img src="./src/img/herop.png" alt="Gambar Banner" width="100%">
-          </div>
-        </div>
+    <!-- In order -->
+    <h2>Tabs</h2>
+    <p>Click on the buttons inside the tabbed menu:</p>
+    
+    <div class="tab">
+      <button class="tablinks" onclick="feature(event, 'inorder')">Your Order</button>
+      <button class="tablinks" onclick="feature(event, 'rentwork')">Rent Working</button>
+      <button class="tablinks" onclick="feature(event, 'history')">History</button>
     </div>
-    <!-- Banner -->
+    
+    <div id="inorder" class="tabcontent">
+        <div class="row">
+            <div class="column">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div class="column">
 
-    <!-- showroom -->
-    <h1 style="text-align: center;font-style: italic">Best Order</h1>
-    <div class="showroom">
-        <div class="containershow">
-            <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                <img src="./src/img/pngwing.com(16).png" style="width:100%">
             </div>
-    
-            <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="./src/img/forklift.png" style="width:100%">
-            </div>
-    
-                
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-    
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-    
-            <div class="row">
-                <div class="column">
-                <img class="demo cursor" src="./src/img/pngwing.com(16).png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-                </div>
-                <div class="column">
-                <img class="demo cursor" src="./src/img/forklift.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-                </div>
-            </div>
-        </div>
+        </div> 
     </div>
-    <!-- showroom -->
-
-    <!-- All Rent -->
-    <div class="allrent">
-        <h2>Category</h2>
-        <p>Terdapat puluhan kategori alat berat.</p>
-
-        <div id="containerCategory">
-            <!-- item card -->
-        </div>
     
-    <!-- All Rent -->
+    <div id="rentwork" class="tabcontent">
+        <div class="row">
+            <div class="column">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div class="column">
+
+            </div>
+        </div>  
+    </div>
+    
+    <div id="history" class="tabcontent">
+        <div class="row">
+            <div class="column">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div class="column">
+
+            </div>
+        </div> 
+    </div>
+    <!-- In order -->
 
     <!--scripts-->
-    <script src="./src/showroom.js"></script>
-    <script src="./src/login.js"></script>
-    <script src="./src/category.js"></script>
-  
+    <script src="./src/clientarea.js"></script>
 </body>
 </html>

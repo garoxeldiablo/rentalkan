@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",async()=>{
 
             // 
             const a = document.createElement("a");
-            a.classList.add();
+            a.href = "../detail.html";
             categoryBox.appendChild(a);
             // 
 

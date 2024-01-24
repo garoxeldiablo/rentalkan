@@ -40,3 +40,18 @@ export const login = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
+
+// detail product
+export const detProduk = async (req, res) => {
+  const productId = parseInt(req.params.id);
+  // Cari produk dengan ID yang sesuai
+  const product = alatBerat.find(prod => prod.id === productId);
+
+  // Tampilkan halaman detail produk
+  if (product) {
+    res.send(`<h1>Detail Produk</h1><p>${product.produk}</p><p>${product.merk}</p>`);
+  } else {
+    res.status(404).send('Produk tidak ditemukan');
+  }
+};
+

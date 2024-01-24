@@ -32,10 +32,8 @@ nav{
 }
 .logo{
   display: inline-block;
-  vertical-align: top;
-  height: 50px;
-  margin-left: 100px;
-  margin-right: 5px;
+  height: 30px;
+  margin : 10px 5px 10px 100px;
 }
 
 input[type=search] {
@@ -74,7 +72,7 @@ a.active,a:hover{
 }
 .checkbtn{
   font-size: 30px;
-  color: white;
+  color: #2c3e50;
   float: right;
   margin-right: 30px;
   cursor: pointer;
@@ -91,9 +89,16 @@ a.active,a:hover{
 @media (max-width: 1010px){
   .logo{
     display: inline-block;
-    vertical-align: top;
-    height: 50px;
-    margin-left: 0;
+    height: 35px;
+    margin: 3px 3px 3px 10px;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .logos{
+    margin: 5px;
   }
   .checkbtn{
     display: block;
