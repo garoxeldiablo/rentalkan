@@ -14,3 +14,23 @@ function feature(evt, featureName) {
     evt.currentTarget.className += " active";
 }
 
+// info user
+document.addEventListener("DOMContentLoaded", function() {
+  // Ambil informasi pengguna dari localStorage
+  var loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+  // Tampilkan informasi pengguna di halaman
+  if (loggedInUser) {
+    displayUserInfo(loggedInUser);
+  } else {
+    // Jika tidak ada informasi pengguna, redirect ke halaman login
+    window.location.href = 'login.html';
+  }
+});
+
+function displayUserInfo(catchdb) {
+  // Tampilkan informasi pengguna di halaman
+  var userInfoDiv = document.getElementById("username-display");
+  userInfoDiv.innerHTML = `${catchdb.email}`;
+}
+

@@ -12,6 +12,24 @@ export const dataAlatBerat = async (req, res) => {
     }
   };
 
+  // detail product
+export const detProduk = async (req, res) => {
+  const productId = parseInt(req.params.id);
+  // Cari produk dengan ID yang sesuai
+  try {
+    const product = await alatBerat.findByPk(productId);
+  
+    if (product !== null && product !== undefined) {
+      res.send(`<h1>Detail Produk</h1><p>${product.produk}</p><p>${product.merk}</p>`);
+    } else {
+      res.status(404).send('Produk tidak ditemukan');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send('Terjadi kesalahan server');
+  }
+};
+
   // register user baru
   export const addUser = async(req,res) => {
     try {
@@ -41,21 +59,21 @@ export const login = async (req, res) => {
   }
 };
 
-// detail product
-export const detProduk = async (req, res) => {
-  const productId = parseInt(req.params.id);
-  // Cari produk dengan ID yang sesuai
+// data user
+export const userId = async (req, res) => {
+  const userId = parseInt(req.params.id)
   try {
-    const product = await alatBerat.findByPk(productId);
+    const userIds = await userClient.findByPk(userId);
   
-    if (product !== null && product !== undefined) {
-      res.send(`<h1>Detail Produk</h1><p>${product.produk}</p><p>${product.merk}</p>`);
+    if (userIds !== null && userIds !== undefined) {
+      res.json(userIds);
     } else {
-      res.status(404).send('Produk tidak ditemukan');
+      res.status(404).send('user tidak ditemukan');
     }
   } catch (error) {
     console.error('Error:', error);
     res.status(500).send('Terjadi kesalahan server');
   }
 };
+
 

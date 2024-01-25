@@ -1,3 +1,4 @@
+
 // matching user
 function submitLog(e) {
   e.preventDefault();
@@ -5,8 +6,8 @@ function submitLog(e) {
   const pwUser = document.getElementById('password').value;
 
   const catchdb = {
-    email: emailUser,
-    password: pwUser,
+      email: emailUser,
+      password: pwUser,
   };
 
   fetch('http://localhost:3000/login', {
@@ -25,6 +26,7 @@ function submitLog(e) {
         // Successful login
         alert('Selamat Datang');
         window.location.href = '../clientarea.html';
+        localStorage.setItem('loggedInUser', JSON.stringify(catchdb));
       } else {
         // Invalid login
         alert('Invalid credentials');
