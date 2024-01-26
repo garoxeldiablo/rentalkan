@@ -8,6 +8,53 @@
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://kit.fontawesome.com/6ac5fc642c.js" crossorigin="anonymous"></script>
+    <style>
+      .flex-container {
+      display: flex;
+      flex-direction: row;
+      font-size: 30px;
+      width: 80%;
+      justify-content: center;
+    }
+
+    .flex-item-left {
+      margin-top: 100px;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    .flex-item-right {
+      margin-top: 100px;
+      background-color: dodgerblue;
+      padding: 10px;
+    }
+
+    .produk{
+      display: flex;
+      justify-content: center;
+    }
+
+    #img-produk{
+      margin: 30px;
+    }
+
+    /* Responsive layout - makes a one column-layout instead of two-column layout */
+    @media (max-width: 800px) {
+      .flex-container {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .produk{
+        display: block;
+        text-align: center;
+      }
+
+      .flex-item-right {
+      margin-top: 0;
+    }
+    }
+    </style>
 </head>
 <body>
     <!-- Nav -->
@@ -27,5 +74,23 @@
         </ul>
     </nav>
     <!-- Nav -->
+
+    <!-- main detail -->
+    <div class="flex-container">
+      <div class="flex-item-left">
+        <div class="produk">
+          <img id="img-produk" src="https://placehold.co/250">
+          <div class="info-produk">
+            <h3>beko tahan batu kuat semen</h3>
+            <h4>itachi uchia</h4>
+          </div>
+        </div>
+        <div class="infoitem">
+        </div>
+      </div>
+      <div class="flex-item-right">
+        
+      </div>
+    </div>
 </body>
 </html>
