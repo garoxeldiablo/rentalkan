@@ -59,13 +59,19 @@
     }
     }
 
-    table {
-      font-family: arial, sans-serif;
+    #sideinfo {
       border-collapse: collapse;
       width: 100%;
     }
 
-    td, th {
+    #infoharga td,#infoharga th {
+      text-align: center;
+      padding: 8px;
+      font-size: 18px;
+      width: 33.3%;
+    }
+
+    #sideinfo td, th {
       border: 1px solid #dddddd;
       text-align: left;
       padding: 8px;
@@ -105,18 +111,20 @@
             <div class="info-produk">
               <h5>beko tahan batu kuat semen</h5>
               <h6>itachi uchia</h6>
-              <table>
-                <tr>
-                  <th>Company</th>
-                  <th>Contact</th>
-                  <th>Contact</th>
-                </tr>
-                <tr>
-                  <td>Alfreds Futterkiste</td>
-                  <td>Maria Anders</td>
-                  <th>Contact</th>
-                </tr>
-              </table>
+              <div class="info-container">
+                <table id="infoharga">
+                  <tr>
+                    <td>Rp 1.500.000</td>
+                    <td>Rp 500.000</td>
+                    <td>Rp 1.000.000</td>
+                  </tr>
+                  <tr>
+                    <th>Sewa</th>
+                    <th>Minimum Sewa</th>
+                    <th>Harian Operator</th>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
           <div class="infoitem">
@@ -124,22 +132,18 @@
         </div>
         <div class="flex-item-right">
           <div class="tables">
-            <table>
+            <table id="sideinfo">
               <tr>
-                <th>Company</th>
-                <th>Contact</th>
+                <td>Spesifikasi</td>
+                <td>112</td>
               </tr>
               <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
+                <td>Spesifikasi</td>
+                <td>112</td>
               </tr>
               <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-              </tr>
-              <tr>
-                <td>Ernst Handel</td>
-                <td>Roland Mendel</td>
+                <td>Spesifikasi</td>
+                <td>112</td>
               </tr>
             </table>
           </div>
