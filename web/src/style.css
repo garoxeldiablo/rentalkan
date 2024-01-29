@@ -107,7 +107,8 @@ a.active,a:hover{
     position: fixed;
     width: 50%;
     height: 100vh;
-    background: #2c3e50;
+    color: #213555;
+    background: white;
     left: -100%;
     text-align: center;
     transition: all .5s;
