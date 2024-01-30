@@ -20,7 +20,7 @@ export const detProduk = async (req, res) => {
     const product = await alatBerat.findByPk(productId);
   
     if (product !== null && product !== undefined) {
-      res.send(`<h1>Detail Produk</h1><p>${product.produk}</p><p>${product.merk}</p>`);
+      res.status(200).json(product);
     } else {
       res.status(404).send('Produk tidak ditemukan');
     }
