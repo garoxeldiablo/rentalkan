@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded",async()=>{
         const response = await fetch("http://localhost:3000/view");
         const data = await response.json(JSON);
         console.log(data);
+        localStorage.setItem('detailProduk', JSON.stringify(data));
 
         data.forEach((dataAlat) => {
-
             // 
             const categoryBox = document.createElement("div");
             categoryBox.classList.add("category-box");
@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded",async()=>{
 
             // 
             const a = document.createElement("a");
-            a.href = "../detail.html";
+            let productId = dataAlat.id;
+            a.href = `../detail.html?=${productId}`;
             categoryBox.appendChild(a);
             // 
 
