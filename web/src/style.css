@@ -81,6 +81,7 @@ a.active,a:hover{
 #check{
   display: none;
 }
+
 @media (max-width: 952px){
   nav ul li a{
     font-size: 16px;
@@ -103,7 +104,7 @@ a.active,a:hover{
   .checkbtn{
     display: block;
   }
-  ul{
+  #ulnavbar{
     position: fixed;
     width: 50%;
     height: 100vh;
@@ -359,114 +360,102 @@ a.cardItem{
   }
 /* All product */
 
-/* form login */
+/* footer */
+.row-footer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  margin: auto;
+  text-align: left;
+}
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
+#ulfooter {
+  list-style:none;
+  margin-left: auto;
+}
+
+.footer {
+  background-color: black;
+  padding: 70px 0;
+  position: relative;
+  bottom: 0;
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
   position: relative;
 }
 
-.container {
-  padding: 16px;
-}
 
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-  text-align: center;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 30%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
+.footer-col h4::before {
+  content: "";
   position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+  left: 0;
+  bottom: -10;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
 }
 
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  display: block;
+  transition: all 0.3s ease;
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+.footer-col ul li a:hover {
+  color: #020202;
+  padding-left: 8px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+@media(max-width: 767px) {
+  .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
   }
-  .cancelbtn {
-     width: 100%;
-  }
+
 }
-/* form login */
+
+@media(max-width: 574px) {
+  .footer-col {
+      width: 100%;
+  }
+
+}
